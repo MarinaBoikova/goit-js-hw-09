@@ -6,14 +6,16 @@ function getRandomHexColor() {
   const btnStopRef = document.querySelector('[data-stop]');
   let  colorId;
 
+
   btnStartRef.addEventListener('click', () => {
-     colorId = setInterval(() => document.querySelector('body').style.backgroundColor = getRandomHexColor(), 1000);
-    btnStopRef.disabled = false;
+    colorId = setInterval(() => document.querySelector('body').style.backgroundColor = getRandomHexColor(), 1000);
+if(colorId !== null){
     btnStartRef.disabled = true;
+}
 });
 
 btnStopRef.addEventListener('click', () => {
     clearInterval(colorId);
-    btnStopRef.disabled = true;
     btnStartRef.disabled = false;
 });
+

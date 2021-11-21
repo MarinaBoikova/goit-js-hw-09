@@ -37,5 +37,3 @@ const createPromiseHandler = event => {
 };
 
 inputForm.addEventListener('submit', createPromiseHandler);
-
-
